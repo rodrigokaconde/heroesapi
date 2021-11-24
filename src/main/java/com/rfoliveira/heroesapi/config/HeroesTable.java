@@ -37,6 +37,7 @@ public class HeroesTable {
                     new ProvisionedThroughput(5L, 5L));
 
             table.waitForActive();
+            System.out.println("Tabela criada com sucesso: "+table.getDescription().getTableStatus());
         }
         catch (Exception e){
             System.out.println(e.getMessage());
