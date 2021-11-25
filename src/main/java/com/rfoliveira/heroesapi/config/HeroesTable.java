@@ -15,8 +15,8 @@ import java.util.Arrays;
 import static com.rfoliveira.heroesapi.constans.HeroesConstant.ENDPOINT_DYNAMO;
 import static com.rfoliveira.heroesapi.constans.HeroesConstant.REGION_DYNAMO;
 
-@Configuration
-@EnableDynamoDBRepositories
+//@Configuration
+//@EnableDynamoDBRepositories
 public class HeroesTable {
     public static void main(String[] args) throws Exception{
 

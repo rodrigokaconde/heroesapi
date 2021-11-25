@@ -13,6 +13,7 @@ import reactor.core.publisher.Mono;
 import static com.rfoliveira.heroesapi.constans.HeroesConstant.HEROES_ENDPOINT_LOCAL;
 
 @RestController
+@Slf4j
 public class HeroesController {
     HeroesService heroesService;
     HeroesRepository heroesRepository;
@@ -32,8 +33,8 @@ public class HeroesController {
     }
 
     @GetMapping(HEROES_ENDPOINT_LOCAL + "/{id}")
-    public Mono<ResponseEntity<Heroes>> findByIdHero(@PathVariable String id) {
-        log.info("Requesting the hero with id {}", id);
+    public Mono<ResponseEntity<Heroes>> findById(@PathVariable String id) {
+        //log.info("Requesting the hero with id {}", id);
         return heroesService.findById(id)
                 .map((item) -> new ResponseEntity<>(item, HttpStatus.OK))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));

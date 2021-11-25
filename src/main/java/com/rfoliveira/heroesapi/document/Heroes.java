@@ -1,5 +1,6 @@
 package com.rfoliveira.heroesapi.document;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import lombok.AllArgsConstructor;
@@ -16,10 +17,10 @@ public class Heroes {
     @Id
     @DynamoDBHashKey(attributeName = "id")
     private String id;
-    @DynamoDBHashKey(attributeName = "name")
+    @DynamoDBAttribute(attributeName = "name")
     private String name;
-    @DynamoDBHashKey(attributeName = "universe")
+    @DynamoDBAttribute(attributeName = "universe")
     private String universe;
-    @DynamoDBHashKey(attributeName = "films")
+    @DynamoDBAttribute(attributeName = "films")
     private int films;
 }

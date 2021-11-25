@@ -23,21 +23,21 @@ public class HeroesData {
         Table table = dynamoDB.getTable("Heroes_Api_Table");
 
         Item hero = new Item()
-                .withPrimaryKey("id", "2")
-                .withString("name", "Mulher Maravilha")
-                .withString("universe", "dc comics")
+                .withPrimaryKey("id", "5")
+                .withString("name", "Homem de Ferro")
+                .withString("universe", "Marvel")
                 .withNumber("films", 2);
 
         Item hero2 = new Item()
-                .withPrimaryKey("id", "3")
-                .withString("name", "Viuva negra")
-                .withString("universe", "marvel")
+                .withPrimaryKey("id", "6")
+                .withString("name", "Super Homem")
+                .withString("universe", "Dysney")
                 .withNumber("films", 2);
 
         Item hero3 = new Item()
-                .withPrimaryKey("id", "4")
-                .withString("name", "Capita marvel")
-                .withString("universe", "marvel")
+                .withPrimaryKey("id", "7")
+                .withString("name", "Wolverine")
+                .withString("universe", "dysney")
                 .withNumber("films", 2);
 
         PutItemOutcome outcome1 = table.putItem(hero);
