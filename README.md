@@ -1,17 +1,36 @@
 # heroesapi
+## API Gerenciador de Heróis
 
-- awsCli
-- DynamoDB
+### Tecnologias utilizadas
+- String Data
 - Java
+- DynamoDB
 - Lombok
 
-java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+### Pré-Requisitos:
 
-Create table run /config:
-HeroesTable
+- Java 8
+- Maven
+- AWS Cli
+- DynamoDB
 
-Popular table run in /config:
-HeroesData
+### Executar DynamoDB:
 
-http://localhost:8080/heroes
+Na pasta onde se encontra o JAR do DynamoDB: ``java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb``
+
+### Criação das tabelas classe:
+src/main/java/com/rfoliveira/heroesapi/config/HeroesTable.java
+
+### Popular tabela:
+src/main/java/com/rfoliveira/heroesapi/config/HeroesData.java
+
+### Executar heroesapi:
+src/main/java/com/rfoliveira/heroesapi/HeroesapiApplication.java 
+
+### EndPoints
+- Listar todos GET: http://localhost:8080/heroes
+- Listar por ID GET: http://localhost:8080/heroes/id
+- Deletar por ID DELETE: http://localhost:8080/heroes/id
+- Cadastrar novo POST: http://localhost:8080/heroes
+
 
